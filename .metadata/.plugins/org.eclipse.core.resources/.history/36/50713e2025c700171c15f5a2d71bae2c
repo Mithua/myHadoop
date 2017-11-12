@@ -1,0 +1,5 @@
+package ds.stat4
+
+object Main extends App {
+			println("Hello World!")
+}

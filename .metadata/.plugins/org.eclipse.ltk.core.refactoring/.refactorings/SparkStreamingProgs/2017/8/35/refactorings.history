@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LogAlarmer.scala&apos; to &apos;Databricks/src/ds.stat4&apos;&#x0D;&#x0A;- Original project: &apos;SparkStreamingProgs&apos;&#x0D;&#x0A;- Destination element: &apos;Databricks/src/ds.stat4&apos;&#x0D;&#x0A;- Original element: &apos;LogAlarmer.scala&apos;" description="Copy file" destination="=Databricks/src&lt;ds.stat4" element1="src/ds/stat4/LogAlarmer.scala" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1503842765937" units="0" version="1.0"/>
+</session>

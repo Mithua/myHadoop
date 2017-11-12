@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="org.eclipse.cvs:1.4.300.v20160907-1200"/>
+		<item value="org.eclipse.egit:4.4.1.201607150455-r"/>
+		<item value="org.eclipse.emf.common:2.12.0.v20160420-0247"/>
+		<item value="org.eclipse.emf.ecore:2.12.0.v20160420-0247"/>
+		<item value="org.eclipse.epp.mpc:1.5.2.v20161005-1414"/>
+		<item value="org.eclipse.help:2.2.0.v20160907-1200"/>
+		<item value="org.eclipse.jdt:3.12.1.v20160907-1200"/>
+		<item value="org.eclipse.jgit:4.4.1.201607150455-r"/>
+		<item value="org.eclipse.m2e.feature:1.7.0.20160603-1933"/>
+		<item value="org.eclipse.pde:3.12.1.v20160907-1200"/>
+		<item value="org.eclipse.platform:4.6.1.v20160907-1200"/>
+		<item value="org.eclipse.rcp:4.6.1.v20160907-1200"/>
+		<item value="org.scala-ide.play2.feature:0.9.0.v-2_11-201612131054-063b4e8"/>
+		<item value="org.scala-ide.scala211.feature:4.5.0.201612131029"/>
+		<item value="org.scala-ide.sdk.feature:4.5.0.201612131100"/>
+		<item value="org.scala-ide.sdt.feature:4.5.0.v-2_11-201612131030-02830a6"/>
+		<item value="org.scala-ide.sdt.scalatest.feature:2.10.0.v-4-2_11-201603171205-8ee752f"/>
+		<item value="org.scala-ide.zinc.feature:4.5.0.201612131029"/>
+		<item value="org.scalaide.worksheet.feature:0.6.0.v-2_11-201612131053-33a0723"/>
+	</list>
+</section>

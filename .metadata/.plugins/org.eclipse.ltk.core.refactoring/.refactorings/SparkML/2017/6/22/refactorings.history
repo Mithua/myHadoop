@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;SparkMLProgs/src/ds.stat4&apos;&#x0D;&#x0A;- Original project: &apos;SparkML&apos;&#x0D;&#x0A;- Destination element: &apos;SparkMLProgs/src/ds.stat4&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     LinearRegression.scala&#x0D;&#x0A;     LinearRegressionDataFrame.scala" description="Copy files" destination="=SparkMLProgs/src&lt;ds.stat4" element1="src/ds/stat4/LinearRegression.scala" element2="src/ds/stat4/LinearRegressionDataFrame.scala" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1496336119377" units="0" version="1.0"/>
+</session>

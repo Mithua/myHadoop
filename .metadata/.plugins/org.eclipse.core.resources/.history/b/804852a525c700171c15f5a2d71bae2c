@@ -1,0 +1,7 @@
+package ds.stat4
+
+object Main extends App {
+    var name = Array("Faizan", "Swati", "Kavya", "Deepak", "Deepak")
+}
+println("Hello World!!")
+

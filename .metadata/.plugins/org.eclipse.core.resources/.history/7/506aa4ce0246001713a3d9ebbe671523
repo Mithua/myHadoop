@@ -1,0 +1,44 @@
+package ds.stat4
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+
+/** Compute the number of people died or survived in each class with their genders and ages. 
+
+The Data Set Contain Below Fields :: Column 1 : PassengerId,Column 2 : Survived,(survived=0 & died=1),Column 3 : Pclass,Column 4 : Name,Column 5 : Sex,Column 6 : Age,Column 7 : SibSp,Column 8 : Parch,Column 9 : Ticket,Column 10 : Fare,Column 11 : Cabin,Column 12 : Embarked */
+
+object TitanicDataAnalysis {
+
+	/** Convert input data to (survived,gender,age,count) tuples */
+	def extractTitanicData(line: String) = {
+			val fields = line.split(",")
+					val gender = fields(4)
+					val age = fields(5)
+					val survivedAndDied = fields(1)
+					val sur = survivedAndDied + gender + age;
+			val count = 1;
+			( sur , count.toInt )
+	}
+
+	/** Our main function where the action happens */
+	def main(args: Array[String]) {
+
+		// Set the log level to only print errors
+		Logger.getLogger("org").setLevel(Level.ERROR)
+
+		// Create a SparkContext using every core of the local machine
+		val sc = new SparkContext("local[*]", "TotalSpentByCustomer")   
+
+		val input = sc.textFile("../TitanicData.txt")
+
+		val mappedInput = input.map(extractTitanicData)
+
+		val totalSurviver = mappedInput.reduceByKey( (x,y) => (x + y))
+
+		val results = totalSurviver.collect()
+
+		// Print the results.
+		results.foreach(println)
+	}  
+}

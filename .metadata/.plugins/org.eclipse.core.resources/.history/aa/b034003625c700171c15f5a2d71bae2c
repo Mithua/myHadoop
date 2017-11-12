@@ -1,0 +1,6 @@
+package ds.stat4
+
+object Main extends App {
+			// println("Hello World!")
+			def mul2(m: Int): Int = m * 10
+}

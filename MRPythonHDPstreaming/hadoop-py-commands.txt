@@ -1,0 +1,96 @@
+### hadoop-streaming python word count commands ###
+# ?make 'mapper' +rwx in local -> recheck:
+sudo chmod +rwx /home/cloudera/workspace/<mapper>.py
+# ?make 'reducer' +rwx in local -> recheck:
+sudo chmod +rwx /home/cloudera/workspace/<reducer>.py
+# 'outputs' folder may not exist a priori - it will be created during the run
+# for systematically deleting 'outputs' folder in hadoop:
+hdfs dfs -rm -r /user/cloudera/workspace/outputs
+# when input & output file & folder are in hadoop, {<mapper> & <reducer> are in local}
+
+# ------------------------------------------------------------ #
+
+# 1a> for book.txt as input file:
+# Word counts example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/book.txt \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/mapper.py \
+  -reducer /home/cloudera/workspace/reducer.py
+
+# 1b> for words.txt as input file:
+# Word counts example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/words.txt \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/mapper.py \
+  -reducer /home/cloudera/workspace/reducer.py
+
+# ------------------------------------------------------------ #
+
+# 2a> for book.txt as input file:
+# Another word counts example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/book.txt \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/WordCountMapper.py \
+  -reducer /home/cloudera/workspace/WordCountReducer.py
+
+# 2a> for words.txt as input file:
+# Another word counts example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/words.txt \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/WordCountMapper.py \
+  -reducer /home/cloudera/workspace/WordCountReducer.py
+
+# ------------------------------------------------------------ #
+
+# 3a> for book.txt as input file:
+# Average word length by start character example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/book.txt \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/AverageWordLengthMapper.py \
+  -reducer /home/cloudera/workspace/AverageWordLengthReducer.py
+
+# 3b> for words.txt as input file:
+# Average word length by start character example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/words.txt \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/AverageWordLengthMapper.py \
+  -reducer /home/cloudera/workspace/AverageWordLengthReducer.py
+
+# ------------------------------------------------------------ #
+
+# 4> for customer-orders.csv as input file:
+# Sum total spent by customer example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/customer-orders.csv \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/TotalSpendByCustomerMapper.py \
+  -reducer /home/cloudera/workspace/TotalSpendByCustomerReducer.py
+
+# ------------------------------------------------------------ #
+
+# 5> for fakefriends.csv as input file:
+# Average no. of friends by age example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/fakefriends.csv \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/FriendByAgeMapper.py \
+  -reducer /home/cloudera/workspace/FriendByAgeReducer.py
+
+# ------------------------------------------------------------ #
+
+# 6> for u.data as input file:
+# Movie Rating counts example
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.11.0.jar \
+  -input /user/cloudera/workspace/u.data \
+  -output /user/cloudera/workspace/outputs \
+  -mapper /home/cloudera/workspace/MovieRatingCounterMapper.py \
+  -reducer /home/cloudera/workspace/MovieRatingCounterReducer.py
+
+# ------------------------------------------------------------ #
+
